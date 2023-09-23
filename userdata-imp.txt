@@ -1,0 +1,20 @@
+sonar-token:-   ram: 2a09d4ec94abe14ae912982ad4106fecf9c0e356
+
+https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61524.zip
+
+https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-3.58.1-02-unix.tar.gz
+
+
+mvn sonar:sonar -Dsonar.login=your_authentication_token   ------>give this in jenkins instance for manual project sonarqube token authentication
+
+
+RUN_AS_USER=sonar        -------> give this vi sonar.sh 
+
+
+
+<server>
+      <id>nexusRepo</id>
+      <username>admin</username>
+      <password>ramu0653</password>
+    </server>                                               ---->give this in jenkins ec2-instance vi /etc/maven/settings.xml
+
