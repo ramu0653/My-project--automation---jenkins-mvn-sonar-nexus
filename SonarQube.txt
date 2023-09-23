@@ -1,0 +1,21 @@
+
+    1  yum install -y java-11*
+    2  cd /opt
+    3  wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61524.zip
+    4  unzip sonarqube-8.9.10.61524.zip
+    5  mv sonarqube-8.9.10.61524 sonar
+    6  ll
+    7  useradd sonar
+    8  passwd sonar
+    9  chown -R sonar:sonar sonar
+   10  ll
+   11  cd sonar/
+   12  ll
+   13  cd bin/
+   14  cd linux-x86-64/
+   15  ls
+   16  vi sonar.sh 
+   17  ./sonar.sh status
+   18  ./sonar.sh start
+   19  ./sonar.sh status
+   20  vi sonar.sh 

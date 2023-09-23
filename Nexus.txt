@@ -1,0 +1,28 @@
+    1  yum install -y java-1.8*
+    2  cd /opt
+    4  wget https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-3.58.1-02-unix.tar.gz
+    5  ls
+    6  tar -xvf nexus-3.58.1-02-unix.tar.gz 
+    7  ls
+    8  mv nexus-3.58.1-02 nexus3
+    9  ll
+   10  useradd nexus
+   11  passwd nexus
+   12  chown -R nexus:nexus nexus3 sonatype-work/
+   13  ll
+   14  chmod 777 nexus3
+   15  ll
+   16  cd nexus3/
+   17  ll
+   18  cd bin/
+   19  l
+   20  sls
+   21  ls
+   22  vi nexus.rc
+   23  ./nexus status
+   24  ./nexus start
+   25  ./nexus status
+   26  ./nexus status
+   27  ./nexus status
+   28  history
+   29  cat /opt/sonatype-work/nexus3/admin.password

@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>in.javahome</groupId>
+    <artifactId>myweb</artifactId>
+    <packaging>war</packaging>
+    <version>8.2.0</version>
+    <name>Java Home myweb</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <java.version>11</java.version> <!-- Updated Java version to 11 -->
+        <maven.version>3.8.4</maven.version> <!-- Updated Maven version to 3.8.4 -->
+        <docker.image.prefix>kammana</docker.image.prefix>
+        <sonar.host.url>http://65.2.184.41:9000/</sonar.host.url> <!-- Updated SonarQube URL -->
+        <sonar.login>7f67f725144ccd69901c440d8cd85c50262f6fae</sonar.login> <!-- Add your SonarQube token or username -->
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Add the SonarQube plugin configuration with the updated version -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version> <!-- Update to the latest version if needed -->
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexusRepo</id>
+            <url>http://52.66.16.99:8081/repository/sample-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexusRepo</id>
+            <url>http://52.66.16.99:8081/repository/sample-releases/</url>
+        </repository>
+    </distributionManagement>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>maven1</id>
+            <name>Maven.org</name>
+            <url>http://repo1.maven.org/maven2</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>

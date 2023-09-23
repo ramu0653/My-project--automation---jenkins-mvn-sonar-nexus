@@ -1,0 +1,16 @@
+1  yum install java-11*
+    2  yum install java-11*
+    3  wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.80/bin/apache-tomcat-9.0.80.tar.gz
+    4  tar -xvf apache-tomcat-9.0.80.tar.gz
+    5  ls
+    6  chown -R ec2-user:ec2-user apache-tomcat-9.0.80
+    7  ll
+    8  cd apache-tomcat-9.0.80/
+    9  chmod 777 webapps/
+   10  vi webapps/manager/META-INF/context.xml 
+   11  vi conf/tomcat-users.xml 
+   12  cd bin/sh start.sh
+   13  cd bin/./start.sh
+   14  cd bin/
+   15  ls
+   16  ./startup.sh 
